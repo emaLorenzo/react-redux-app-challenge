@@ -4,11 +4,12 @@ import FormCompany from 'components/FormCompany';
 import FormEmployee from 'components/FormEmployee';
 import CardContent from 'components/CardContent';
 import {
-  ScrollView, StyleSheet, View, Modal, Text, TouchableHighlight,
+  ScrollView, StyleSheet, View, Modal,
 } from 'react-native';
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Icon as Close } from 'react-native-elements';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
 import PropTypes from 'prop-types';
 
 const styles = StyleSheet.create({
@@ -27,6 +28,7 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
   },
   close: {
+    marginTop: getStatusBarHeight(true),
     padding: 16,
   },
 });

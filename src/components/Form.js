@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import useForm from 'hooks/useForm';
-import { Picker, StyleSheet } from 'react-native';
+import { Picker, StyleSheet, Platform } from 'react-native';
 import { Button, Input } from 'react-native-elements';
 import Text from 'components/Text';
 import PropTypes from 'prop-types';
@@ -16,7 +16,7 @@ const FormContainer = styled.View`
 const styles = StyleSheet.create({
   picker: {
     marginBottom: 10,
-    height: 50,
+    height: Platform.OS === 'android' ? 50 : 200,
     width: '100%',
   },
   input: {
